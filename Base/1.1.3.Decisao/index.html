@@ -1,0 +1,2243 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../1.1.2.Divergir/">
+      
+      
+        <link rel="next" href="../1.1.4.Prototipar/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>1.1.3. Decidir - G1 Embarcados - Entrega 04</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto Mono";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/custom-general.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#quarta-feira-do-sprint-decisao-e-prototipagem" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../.." title="G1 Embarcados - Entrega 04" class="md-header__button md-logo" aria-label="G1 Embarcados - Entrega 04" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            G1 Embarcados - Entrega 04
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              1.1.3. Decidir
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="deep-orange"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/UnBArqDsw2025-1-Turma01/2025.1-T01-_G1_Embarcado_Entrega_04" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    2025.1-T01-_G1_Embarcado_Entrega_04
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Projeto/Projeto/" class="md-tabs__link">
+          
+  
+  
+  Projetos
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../1.Base/" class="md-tabs__link">
+          
+  
+  
+  Base
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Modelagem/2.Modelagem/" class="md-tabs__link">
+          
+  
+  
+  Modelagem
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../PadroesDeProjeto/3.PadroesDeProjeto/" class="md-tabs__link">
+          
+  
+  
+  Padrões de Projeto
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ArquiteturaReutilizacao/4.ArquiteturaReutilizacao/" class="md-tabs__link">
+          
+  
+  
+  Arquitetura e Reutilizacao
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="G1 Embarcados - Entrega 04" class="md-nav__button md-logo" aria-label="G1 Embarcados - Entrega 04" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    G1 Embarcados - Entrega 04
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/UnBArqDsw2025-1-Turma01/2025.1-T01-_G1_Embarcado_Entrega_04" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    2025.1-T01-_G1_Embarcado_Entrega_04
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Projetos
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Projetos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Projeto/Projeto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Projeto
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Base
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Base
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.Base/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1. Desenho de Software (Base)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.1.DesignSprint/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1.1. Design Sprint
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.1.1.Entender/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1.1.1. Entender
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.1.2.Divergir/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1.1.2. Divergir
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    1.1.3. Decidir
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    1.1.3. Decidir
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#resumo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resumo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inicio-do-sprint" class="md-nav__link">
+    <span class="md-ellipsis">
+      Início do Sprint
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetivo-principal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objetivo principal:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Objetivo principal:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#manha" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manhã:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estrutura-do-processo-de-decisao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estrutura do Processo de Decisão:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#processo-de-criticas-relampago" class="md-nav__link">
+    <span class="md-ellipsis">
+      Processo de Críticas-relâmpago:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pesquisa-de-intencao-de-voto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pesquisa de Intenção de Voto:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supervoto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supervoto:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quando-ha-conflitos-entre-esbocos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quando Há Conflitos entre Esboços:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#storyboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Storyboard:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#batalha-ou-tudo-em-um" class="md-nav__link">
+    <span class="md-ellipsis">
+      Batalha ou Tudo em Um:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#criando-marcas-falsas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criando Marcas Falsas:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anote-e-vote" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anote-e-Vote:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sma" class="md-nav__link">
+    <span class="md-ellipsis">
+      SMA
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cuideme" class="md-nav__link">
+    <span class="md-ellipsis">
+      CuideMe
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusao-de-decisao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusão de Decisão
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      📄 Histórico de Versões
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.1.4.Prototipar/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1.1.4. Prototipar
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.1.5.Testar/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1.1.5. Testar
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.2.ArtefatoGeneralista/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1.2. Artefato Generalista
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.2.1.Lexicos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1.2.1. Léxicos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.2.2.5W2H/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1.2.2. 5W2H
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.2.3.Ishikawa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1.2.3. Ishikawa
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.2.4.StoryBoard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1.2.4. StoryBoard
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.3.ModelagemBPMN/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1.3. Modelagem BPMN
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.4.ParticipacoesBase/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1.4. Participações
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.5.IniciativasExtras/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1.5. Iniciativas Extras
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.5.1.Personas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1.5.1. Proto-personas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Modelagem
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Modelagem
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Modelagem/2.Modelagem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2. Desenho de Software (Modelagem)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Modelagem/2.1.ModelagemEstatica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2.1. Modelagem UML Estática
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Modelagem/2.1.ModelagemEstatica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2.1. Modelagem UML Estática
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Modelagem/2.2.ModelagemDinamica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2.2. Modelagem UML Dinâmica
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Modelagem/2.2.1.Comunicacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2.2.1. Diagrama de Comunicação
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Modelagem/2.2.ModelagemDinamica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2.2. Modelagem UML Dinâmica
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Modelagem/2.3.ModelagemOrganizacionalCasosDeUso/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2.3. Modelagem UML Organizacional ou Casos de Uso
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Modelagem/2.4.ParticipacoesModelagem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2.4. Participações - Modelagem
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Modelagem/2.5.IniciativasExtras/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2.5. Iniciativas Extras - Modelagem
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Padrões de Projeto
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Padrões de Projeto
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PadroesDeProjeto/3.PadroesDeProjeto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3. Desenho de Software (Padrões de Projeto)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PadroesDeProjeto/3.1.GoFsCriacionais/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3.1. Padrões de Projeto GoFs Criacionais
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PadroesDeProjeto/3.2.GoFsEstruturais/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3.2. Padrões de Projeto GoFs Estruturais
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PadroesDeProjeto/3.3.GoFsComportamentais/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3.3. Padrões de Projeto GoFs Comportamentais
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PadroesDeProjeto/3.4.ParticipacoesPadroes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3.4. Participações - Padrões de Projeto
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PadroesDeProjeto/3.5.IniciativasExtras/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3.5. Iniciativas Extras - Padrões de Projeto
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PadroesDeProjeto/3.5.1.DiagramaDeAtividades/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3.5.1. Iniciativas Extras - Diagrama de Atividades
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PadroesDeProjeto/3.5.2.DiagramaDeSequ%C3%AAncia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3.5.2. Iniciativas Extras - Diagrama de Sequência
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PadroesDeProjeto/4.0.%20Embarcado/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    4.0. Embarcado com Padrões de Projeto
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Arquitetura e Reutilizacao
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Arquitetura e Reutilizacao
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ArquiteturaReutilizacao/4.ArquiteturaReutilizacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    4. Desenho de Software (Arquitetura & Reutilização de Software)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ArquiteturaReutilizacao/4.1.DAS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    4.1. DAS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ArquiteturaReutilizacao/4.2.ReutilizacaoDeSoftware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    4.2. Reutilização de Software
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ArquiteturaReutilizacao/4.3.ParticipacoesArqReutilizacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    4.3. Participações - Arquitetura & Reutilização de Software
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#resumo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resumo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inicio-do-sprint" class="md-nav__link">
+    <span class="md-ellipsis">
+      Início do Sprint
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetivo-principal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objetivo principal:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Objetivo principal:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#manha" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manhã:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estrutura-do-processo-de-decisao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estrutura do Processo de Decisão:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#processo-de-criticas-relampago" class="md-nav__link">
+    <span class="md-ellipsis">
+      Processo de Críticas-relâmpago:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pesquisa-de-intencao-de-voto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pesquisa de Intenção de Voto:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supervoto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supervoto:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quando-ha-conflitos-entre-esbocos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quando Há Conflitos entre Esboços:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#storyboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Storyboard:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#batalha-ou-tudo-em-um" class="md-nav__link">
+    <span class="md-ellipsis">
+      Batalha ou Tudo em Um:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#criando-marcas-falsas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criando Marcas Falsas:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anote-e-vote" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anote-e-Vote:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sma" class="md-nav__link">
+    <span class="md-ellipsis">
+      SMA
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cuideme" class="md-nav__link">
+    <span class="md-ellipsis">
+      CuideMe
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusao-de-decisao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusão de Decisão
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      📄 Histórico de Versões
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="quarta-feira-do-sprint-decisao-e-prototipagem">Quarta-feira do Sprint: Decisão e Prototipagem</h1>
+<h2 id="resumo">Resumo</h2>
+<p>Na organização das atividades da quarta-feira, seguimos a metodologia proposta no livro <em><a href="/Base/1.2.1.Lexicos.md#sprint">Sprint</a></em>, de Jake Knapp. Esse dia foi dedicado a <strong>tomar decisões rápidas</strong> sobre quais soluções seriam transformadas em protótipos e a <strong>criar um storyboard</strong> para ilustrar o fluxo do protótipo. A equipe passou por um processo estruturado de avaliação das ideias, utilizando técnicas como <strong>críticas-relâmpago</strong>, <strong>votação</strong> e <strong>supervotos</strong>, garantindo que as melhores ideias fossem escolhidas para a fase de prototipagem.</p>
+<h2 id="inicio-do-sprint">Início do Sprint</h2>
+<p>Como indicado no livro <em>Sprint</em>, de Jake Knapp, a quarta-feira é dedicada a <strong>decidir rapidamente quais soluções serão prototipadas</strong> e a <strong>criar um storyboard</strong> que mostre como a solução será apresentada ao usuário. Abaixo, mostramos as etapas que realizamos seguindo essa estrutura.</p>
+<h2 id="objetivo-principal">Objetivo principal:</h2>
+<p>Decidir quais soluções vão virar protótipos.</p>
+<h3 id="manha">Manhã:</h3>
+<ul>
+<li><strong>Análise crítica das soluções:</strong> A equipe revisa as ideias geradas e decide quais têm mais chance de alcançar o objetivo de longo prazo.</li>
+<li>
+<p><strong>Método para decisões rápidas e eficientes:</strong></p>
+</li>
+<li>
+<p><strong>Museu de arte:</strong> Expor as soluções na parede para observação silenciosa, sem interrupções.</p>
+</li>
+<li><strong>Mapa de calor:</strong> Cada membro coloca adesivos nas partes mais interessantes das soluções.</li>
+<li><strong>Críticas-relâmpago:</strong> Discussão rápida sobre os destaques de cada solução, buscando identificar pontos fortes e fracos.</li>
+<li><strong>Votação:</strong> Cada pessoa escolhe uma solução para votar com adesivo.</li>
+<li>
+<p><strong>Supervoto:</strong> O Definidor toma a decisão final, podendo usar "supervotos" para garantir a escolha.</p>
+</li>
+<li>
+<p><strong>Objetivo do processo:</strong> Tornar a decisão mais ágil e eficiente, aproveitando as ideias da equipe sem sobrecarregar a memória de curto prazo e evitando discussões intermináveis.</p>
+</li>
+</ul>
+<hr />
+<h3 id="estrutura-do-processo-de-decisao">Estrutura do Processo de Decisão:</h3>
+<ol>
+<li><strong>Museu de arte:</strong> Expor as soluções de forma visível e acessível.</li>
+<li><strong>Mapa de calor:</strong> Destacar as partes mais interessantes de cada solução com adesivos de bolinha.</li>
+<li><strong>Críticas-relâmpago:</strong> Discutir rapidamente os pontos fortes e registrar boas ideias.</li>
+<li><strong>Pesquisa de intenção de voto:</strong> Votação individual para priorizar as ideias.</li>
+<li><strong>Supervoto:</strong> O Definidor faz a escolha final usando supervotos, garantindo que a decisão seja tomada com base no consenso.</li>
+</ol>
+<hr />
+<h3 id="processo-de-criticas-relampago">Processo de Críticas-relâmpago:</h3>
+<ul>
+<li>O objetivo é identificar ideias que se destacam, sem que o criador do esboço influencie a opinião da equipe.</li>
+<li><strong>Estrutura da discussão:</strong></li>
+<li>Reunir a equipe ao redor de um esboço.</li>
+<li>Cronometrar 3 minutos de discussão.</li>
+<li>O Facilitador narra o esboço e apresenta as ideias destacadas.</li>
+<li>A equipe sugere melhorias ou novas ideias.</li>
+<li>O Escrevente registra as boas ideias e preocupações.</li>
+<li>O criador do esboço fica em silêncio até o final.</li>
+<li>O criador explica as ideias não percebidas pela equipe e responde a perguntas.</li>
+</ul>
+<hr />
+<h3 id="pesquisa-de-intencao-de-voto">Pesquisa de Intenção de Voto:</h3>
+<ul>
+<li><strong>Objetivo:</strong> Obter a opinião da equipe sobre quais ideias têm mais potencial.</li>
+<li>
+<p><strong>Etapas:</strong></p>
+</li>
+<li>
+<p>Cada membro recebe um adesivo para votar em uma ideia.</p>
+</li>
+<li>A equipe reflete sobre o objetivo do sprint e as perguntas críticas.</li>
+<li>Cada pessoa escreve sua escolha em um post-it, podendo votar em um esboço ou em uma ideia específica.</li>
+<li>
+<p>Explicação rápida de cada voto (1 minuto por pessoa).</p>
+</li>
+<li>
+<p><strong>Objetivo do voto:</strong> A votação não tem efeito definitivo, mas serve como uma orientação para o Definidor.</p>
+</li>
+</ul>
+<hr />
+<h3 id="supervoto">Supervoto:</h3>
+<ul>
+<li><strong>Objetivo:</strong> O Definidor toma a decisão final sobre as ideias vencedoras.</li>
+<li><strong>Etapas:</strong></li>
+<li>O Definidor recebe 3 supervotos especiais.</li>
+<li>O Definidor escolhe as ideias mais promissoras com base nos votos ou pode escolher outras ideias por intuição.</li>
+<li>A decisão final é tomada, e os esboços com supervotos são escolhidos como base para o protótipo.</li>
+</ul>
+<hr />
+<h3 id="quando-ha-conflitos-entre-esbocos">Quando Há Conflitos entre Esboços:</h3>
+<ul>
+<li>Se mais de um esboço vencer, mas não puderem coexistir no mesmo protótipo, a equipe pode realizar uma "Batalha", testando ambos os protótipos separadamente.</li>
+<li>Caso as ideias possam ser combinadas, um único protótipo será criado.</li>
+</ul>
+<hr />
+<h3 id="storyboard">Storyboard:</h3>
+<ul>
+<li>Após a decisão, a equipe cria um <strong>storyboard</strong> para ilustrar o fluxo do protótipo, garantindo que todos os elementos estejam alinhados.</li>
+<li><strong>Passos para o Storyboard:</strong></li>
+<li>O storyboard é composto por 10 a 15 quadros que representam a jornada do usuário.</li>
+<li>Começa com uma cena de abertura, escolhendo um ponto de partida que ajude o público a reagir naturalmente.</li>
+<li>Os esboços vencedores são usados para preencher o storyboard.</li>
+<li>O foco é manter o storyboard simples, sem adicionar novas ideias ou soluções.</li>
+<li>O Definidor ajuda a garantir que o processo não se arraste e que o storyboard seja claro.</li>
+</ul>
+<hr />
+<h3 id="batalha-ou-tudo-em-um">Batalha ou Tudo em Um:</h3>
+<ul>
+<li>Se houver mais de um esboço vencedor, a equipe decide rapidamente se deve realizar uma <strong>Batalha</strong> para testar ambos os protótipos ou <strong>combinar</strong> as ideias em um único protótipo.</li>
+<li><strong>Batalha:</strong> Teste de protótipos distintos para comparar qual solução é mais eficaz.</li>
+<li><strong>Tudo em Um:</strong> Combinação das melhores partes de cada ideia em um único protótipo.</li>
+</ul>
+<hr />
+<h3 id="criando-marcas-falsas">Criando Marcas Falsas:</h3>
+<ul>
+<li>Quando dois protótipos são testados com os usuários, é importante criar <strong>marcas falsas</strong> para evitar confusão.</li>
+<li><strong>Exemplo do Slack:</strong> Um protótipo manteve o nome real, enquanto o outro recebeu o nome de "Gather".</li>
+<li><strong>Outros exemplos:</strong> Empresas como Blue Bottle Coffee usaram nomes falsos para testar diferentes ideias de lojas online.</li>
+</ul>
+<hr />
+<h3 id="anote-e-vote">Anote-e-Vote:</h3>
+<ul>
+<li>Técnica para reunir ideias rapidamente e tomar decisões em grupo:</li>
+<li>Cada membro escreve suas ideias por 3 minutos.</li>
+<li>Todos escolhem as melhores ideias.</li>
+<li>As ideias principais são listadas no quadro branco.</li>
+<li>A equipe vota nas ideias favoritas.</li>
+<li>O Definidor toma a decisão final.</li>
+</ul>
+<hr />
+<h2 id="sma">SMA</h2>
+<p>No primeiro contato geral do grupo tivemos a primeira ideia de solução que seria desenvolver um sistema de monitoramento de qualidade da água. Foi discutido com o grupo em sua totalidade o impacto desse projeto, e como conclusão foi uma idéia superestimada, isso porque queríamos utilizar a indicador de Ph da água como a única forma de assegurar a qualidade da água.</p>
+<p>Em mais deltalhes o projeto seria responsável de monitorar especificadamente a qualidade da água por meio do PH, utlizando sensores de aferição alocados dentro da Universidade de Brasília (UNB). O monitoramento e o mapeamento seria via interface mobile, que geraria relatórios periódicos sobre o nível de ph dos bebedouros. E caso tenha um indicador anormal, iria alertar automaticamente ao portador do aplicativo.</p>
+<div class="info-box">
+  <strong>ℹ️ O esboço dessa primeira ideia pode ser acessado em:</strong><br>
+  <a href="/#/Base/1.2.2.5W2H.md?id=sma">5W2H</a>
+</div>
+
+<p>Dessa forma na primeira etapa <strong>Museo da Arte</strong> esta possível solução não atenderia aos requisitos do projetos a disciplina. Ainda assim continuamos a pesquisar mais afundo mas sem sucesso, prosseguimos com a próxima ideia.</p>
+<hr />
+<h2 id="cuideme">CuideMe</h2>
+<p>Esse projeto veio como plano B, a equipe estava confiante na primeira decisão mas fomos devastados pela falta de embasamento que nele contia. Rápidamente juntou novamente o grupo e realizamos um brainstorm levantando nossas primeiras ideias que vinha sobre esse projeto.</p>
+<p>O projeto CuideMe vem com a ideia de um aplicativo mobile voltado para a segurança de idosos, com foco na detecção automática de quedas através dos sensores do smartphone ou smartwatch, como acelerômetro e giroscópio. O app funciona de forma passiva, monitorando continuamente os movimentos do idoso durante o dia a dia. Em caso de uma possível queda, o sistema envia uma notificação perguntando se está tudo bem e, se não houver resposta dentro de alguns segundos, dispara um alerta automático com a localização exata para os contatos de emergência previamente cadastrados, como familiares ou cuidadores.</p>
+<p>Esse primeiro esboço pode ser visto a seguir:</p>
+<div class="image-embed-container" data-image-path="../../assets/brainstorm.jpg" data-title="brainstorm" style="height: 70vh;"></div>
+
+<p>Posteriormente levantando essas primeiras ideias, foi provocado aos integrantes a entender quais são os pontos mais interessantes desse projeto, e o resultado foi:</p>
+<hr />
+<p><strong>1. Detecção Passiva e Inteligente</strong></p>
+<p><strong>2. Integração com Sensores</strong></p>
+<p><strong>3. Alerta com Geolocalização</strong></p>
+<p><strong>5. Potencial de Expansão</strong></p>
+<hr />
+<div class="info-box">
+  <strong>ℹ️ Mais detalhes em:</strong><br>
+  <a href="/#/Base/1.2.2.5W2H.md?id=CuideMe">5W2H</a>
+</div>
+
+<p>E foi provocado também as possíveis causas de fracasso, pela natureza do projeto alguns dos integrantes não se sentiam confortáveis com o mesmo por se tratar de ferramentas de tecnologias <a href="../1.2.1.Lexicos/#embarcados">embarcados</a></p>
+<div class="info-box">
+  <strong>ℹ️ Mais detalhes em:</strong><br>
+  <a href="/#/Base/1.2.3.Ishikawa">Ishikawa</a>
+</div>
+
+<h2 id="conclusao-de-decisao">Conclusão de Decisão</h2>
+<p>A decisão pelo desenvolvimento do CuideMe foi resultado de um processo colaborativo e adaptativo, marcado pela resiliência da equipe diante de um revés inicial. Ao percebermos a falta de embasamento da nossa ideia anterior, reorganizamos rapidamente nosso foco e, com base em um brainstorm produtivo, identificamos uma nova proposta com forte relevância social e técnica. O CuideMe se destacou não apenas por sua aplicabilidade no cotidiano de idosos, mas também pelo seu potencial de impacto positivo e pela viabilidade tecnológica com os recursos que já existem nos dispositivos móveis. Embora alguns integrantes tenham demonstrado preocupação com o uso de tecnologias embarcadas, o projeto foi mantido como escolha por reunir um conjunto de funcionalidades inovadoras, como detecção passiva de quedas, geolocalização automática e possibilidade de expansão futura. Assim, a decisão final pelo CuideMe representa não apenas uma alternativa viável, mas uma solução com propósito, alinhada aos nossos valores de empatia, acessibilidade e inovação.</p>
+<h2 id="historico-de-versoes">📄 Histórico de Versões</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Versão</th>
+<th style="text-align: center;">Data</th>
+<th style="text-align: center;">Descrição</th>
+<th style="text-align: center;">Autor(es)</th>
+<th style="text-align: center;">Revisor(es)</th>
+<th style="text-align: center;">Descrição da Revisão</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1.0</td>
+<td style="text-align: center;">10/04/2025</td>
+<td style="text-align: center;">Adição dos tópicos</td>
+<td style="text-align: center;"><a href="https://github.com/arthurrochamoreira">Altino Arthur</a></td>
+<td style="text-align: center;"><a href="https://github.com/gravelylara">Lara Giuliana</a></td>
+<td style="text-align: center;">Criação inicial do conteúdo</td>
+</tr>
+<tr>
+<td style="text-align: center;">1.1</td>
+<td style="text-align: center;">10/04/2025</td>
+<td style="text-align: center;">Respostas aos tópicos referente à decisão</td>
+<td style="text-align: center;"><a href="https://github.com/DeM4rcio">Márcio Henrique</a></td>
+<td style="text-align: center;"><a href="https://github.com/arthurrochamoreira">Altino Arthur</a></td>
+<td style="text-align: center;">Inclusão de respostas e complementos</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Rodapé" >
+        
+          
+          <a href="../1.1.2.Divergir/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: 1.1.2. Divergir">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                1.1.2. Divergir
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../1.1.4.Prototipar/" class="md-footer__link md-footer__link--next" aria-label="Próximo: 1.1.4. Prototipar">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Próximo
+              </span>
+              <div class="md-ellipsis">
+                1.1.4. Prototipar
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.footer", "navigation.sections", "navigation.index", "search.suggest", "search.highlight", "content.code.annotate", "content.code.copy", "header.autohide", "announce.dismiss"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      
+        <script src="../../js/interactive.js"></script>
+      
+        <script src="../../js/perfect_embed.js"></script>
+      
+    
+  </body>
+</html>
