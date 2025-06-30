@@ -21,13 +21,15 @@
   </div>
 </div>
 
-## Projeto CuideMe
+# Projeto CuideMe
 
 Este repositório documenta todos os artefatos produzidos pelo **Grupo 01** da disciplina **ARQUITETURA E DESENHO DE SOFTWARE (FGA0208)**, oferecida pela **Faculdade do Gama (FGA/UnB)** no **1º semestre de 2025**. Sendo documentado a **2º Entrega**.
 
+<!--
 <center>
 <img src="assets/Logo_repo.png" width="400px;" alt=""/><br />
 </center>
+  -->
 
 ## Integrantes do Grupo
 
