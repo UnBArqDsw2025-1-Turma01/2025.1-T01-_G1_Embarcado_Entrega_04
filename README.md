@@ -1,3 +1,19 @@
+# RepositorioTemplate
+
+Repositório que deve ser utilizado como template inicial pelos grupos da matéria de Arquitetura e Desenho de Software.
+
+## Introdução
+
+Este repositório traz um template de repo de documentação a ser seguido pelos grupos de arquitetura e desenho de software.
+
+---
+
+## 1. Clone este repositório
+
+```bash
+git clone https://github.com/UnBArqDsw2025-1-Turma01/2025.1-T01-_G1_Embarcado_Entrega_04
+```
+
 ## 2. Pré-requisitos
 
 ### Linux (Ubuntu/Debian)
