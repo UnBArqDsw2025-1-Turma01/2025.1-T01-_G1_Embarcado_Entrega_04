@@ -5,10 +5,10 @@
   --gradient-background-opacity: 30%;
 }
 
-@media (hover: hover) {
-  .md-nav {
-    display: none !important;
-  }
+.md-nav__title,
+.md-nav__link--active {
+  background-color: transparent !important;
+  box-shadow: none !important;
 }
 
 /* Paletas */
