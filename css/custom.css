@@ -5,8 +5,10 @@
   --gradient-background-opacity: 30%;
 }
 
-.md-nav {
-  display: none !important;
+@media (hover: hover) {
+  .md-nav {
+    display: none !important;
+  }
 }
 
 /* Paletas */
@@ -59,7 +61,6 @@
   user-select: none;
   text-shadow: 1px 1px rgba(0, 0, 0, 0.1);
 }
-
 
 /* contraste reforçado */
 .md-main__inner,
@@ -240,4 +241,3 @@
 .md-sidebar__scrollwrap.focus-visible ~ .md-main .gradient-bg {
   display: none;
 }
-
